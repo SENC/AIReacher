@@ -1,3 +1,13 @@
+# What you can learn :
+Deep Reinforcement Learning ,In simple , a mathematical way to clone the experiences start with trial and error (reward & punishment) approach to form a #digitalmemory (Policy with Critic) and take the best actions based on current situation to maximize the rewards like how a Toddler learn to play a Cricket  motivated by 'high scorer' achievement.
+
+This project simply help you to get the core of how AI works and detail implementation of Deep Deterministic Policy Gradients alogorithm .
+
+
+**9 Steps for AI to Win Continuous** 
+
+<img src=images/9stepsDDPG_ActorCritic.png width="684">
+
 # AIReacher Project Overview
 
 This Reacher project is as part of Udacity Nanodegree - AI Deep Reinforcement Learning Expert and aims to develop an AI Agent - "a double-jointed arm" - move to target location in Continuous space using  Policy-based 'Actor-critic' Methods using Deep Neural Networks. 
@@ -16,15 +26,7 @@ Develop an AI Agent using 'actor-critic' methods - which should learn the best p
 #Goal 
 The environment is considered solved, when the average (over 100 episodes) of those average scores is at least +30.
 
-# What you can learn:
-Deep Reinforcement Learning ,In simple , a mathematical way to clone the experiences start with trial and error (reward & punishment) approach to form a #digitalmemory (Policy with Critic) and take the best actions based on current situation to maximize the rewards like how a Toddler learn to play a Cricket  motivated by 'high scorer' achievement.
 
-This project simply help you to get the core of how AI works and detail implementation of Deep Deterministic Policy Gradients alogorithm .
-
-
-**5 Winning Rules for AI too !** <<WIP>>
-
-<img src=images/DDPG.png width="684">
 
 
 # Environment Setup:
