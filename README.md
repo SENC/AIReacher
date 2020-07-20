@@ -4,7 +4,7 @@ Deep Reinforcement Learning (DRL) ,In simple , a mathematical way to clone the e
 This project simply help you to get the core of how AI works and detail implementation of Deep Deterministic Policy Gradients (DDPG) algorithm .
 
 
-**9 Steps for AI to Win Continuous** 
+# 9 steps for AI to Win n Continuous...
 
 <img src=images/9StepsDDPG_ActorCritic.png width="684">
 
