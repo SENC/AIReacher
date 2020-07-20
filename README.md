@@ -1,12 +1,12 @@
-# What you can learn :
-Deep Reinforcement Learning ,In simple , a mathematical way to clone the experiences start with trial and error (reward & punishment) approach to form a #digitalmemory (Policy with Critic) and take the best actions based on current situation to maximize the rewards like how a Toddler learn to play a Cricket  motivated by 'high scorer' achievement.
+# AI - Deep Reinforcement Learning (DRL) - Continuous space - Policy based - 'Actor-Critic' - DDPG :
+Deep Reinforcement Learning (DRL) ,In simple , a mathematical way to clone the experiences start with trial and error (reward & punishment) approach to form a #digitalmemory (Policy with Critic) and take the best actions based on current situation to maximize the rewards like how a Toddler learn to play a Cricket  motivated by 'high scorer' achievement.
 
-This project simply help you to get the core of how AI works and detail implementation of Deep Deterministic Policy Gradients alogorithm .
+This project simply help you to get the core of how AI works and detail implementation of Deep Deterministic Policy Gradients (DDPG) algorithm .
 
 
 **9 Steps for AI to Win Continuous** 
 
-<img src=images/9stepsDDPG_ActorCritic.png width="684">
+<img src=images/9StepsDDPG_ActorCritic.png width="684">
 
 # AIReacher Project Overview
 
@@ -30,14 +30,21 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 
 # Environment Setup:
+For Environment setup, you need Python 3.6, pytorch ,Ml-agents, Unity Environment to be installed. Once you setup your python environment , you just needs to have agent.py ,nn_model.py and Continuous_Control.ipynb if you wish to have quick hands-on .
 1. Anaconda Navigator - python 3.6
 2. PyTorch 
  Example: conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
  select right commands based on your OS , Python and conda/pip 
   https://pytorch.org/get-started/locally/>
-  
-3.UnityAgent
+3. Unity Environment 
+   https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md
+   
+4.More detail on  Ml-Agents 
+   https://github.com/Unity-Technologies/ml-agents/blob/master/docs/ML-Agents-Overview.md
+
+5.Windows Env setup details - deprecated but may be useful
+  https://hub.udacity.com/rooms/community:nd893:845401-project-503-smg-2/community:thread-12988088548-3621024?messageId=3652300&contextType=room
 
   
 For the detail instruction please check https://github.com/udacity/deep-reinforcement-learning/blob/master/p1_navigation/README.md
-To setup, you need Python 3.6, Unity Environment to be installed.Once you setup your python environment , have agent.py ,nn_model.py and checkpoint17.pt if you wish to directly test the trained Agent.
+
