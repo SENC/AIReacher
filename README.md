@@ -6,7 +6,7 @@ This project simply help you to get the core of how AI works and detail implemen
 
 # 9 steps for AI to Win n Continuous...
 
-<img src=images/9StepsDDPG_ActorCritic.png width="684">
+<img src=images/9StepsDDPG_ActorCriticv2.png width="684">
 
 # AIReacher Project Overview
 
