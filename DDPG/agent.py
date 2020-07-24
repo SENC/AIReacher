@@ -10,16 +10,16 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 BUFFER_SIZE = 500000    #int(1e4)  # replay buffer size
-BATCH_SIZE = 300       #128        # minibatch size
+BATCH_SIZE = 256        #128        # minibatch size
 GAMMA = 0.997            # discount factor
 TAU = 0.0013              # for soft update of target parameters
-LR_ACTOR = 0.0002         # learning rate of the actor 
+LR_ACTOR = 0.00013         # learning rate of the actor 
 LR_CRITIC = 1e-3        # learning rate of the critic
 WEIGHT_DECAY = 0        # L2 weight decay
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-class AiAgent():
+class DDPGAgent():
     """Interacts with and learns from the environment."""
     
     def __init__(self, state_size, action_size, random_seed):
@@ -63,17 +63,20 @@ class AiAgent():
 
     def act(self, state, add_noise=True):
         """Returns actions for given state as per current policy."""
+          
+        self.actor_local.eval()
         state = torch.from_numpy(state).float().to(device)
-        #state = torch.as_tensor(np.array(state).astype('float')).to(device)
+        #state = torch.from_numpy(np.array(state,dtype=np.float16)).to('cpu')
+        #state = torch.from_numpy(state,dtype=np.float64).to(device)
+        #state = torch.as_tensor(np.array(state,dtype=np.float64)).to(device)
         self.actor_local.eval()
         with torch.no_grad():
             action = self.actor_local(state).cpu().data.numpy()
-            
         self.actor_local.train()
         if add_noise:
             action += self.noise.sample()
-        action = (action + 1.0) / 2.0
-        return np.clip(action, 0, 1)
+        
+        return action 
 
 
     def reset(self):
@@ -133,11 +136,7 @@ class AiAgent():
         for target_param, local_param in zip(target_model.parameters(), local_model.parameters()):
             target_param.data.copy_(tau*local_param.data + (1.0-tau)*target_param.data)
     
-    def step_learn(self):
-        if len(self.memory) > BATCH_SIZE:
-            experiences = self.memory.sample()
-            self.learn(experiences, GAMMA)
-
+                
 class OUNoise:
     """Ornstein-Uhlenbeck process."""
 
@@ -156,7 +155,7 @@ class OUNoise:
     def sample(self):
         """Update internal state and return it as a noise sample."""
         x = self.state
-        dx = self.theta * (self.mu - x) + self.sigma * np.array([random.random() for i in range(len(x))])
+        dx = self.theta * (self.mu - x) + self.sigma *  np.random.randn(len(x)) # np.array([random.random() for i in range(len(x))])
         self.state = x + dx
         return self.state
 
