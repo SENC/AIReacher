@@ -34,6 +34,7 @@ The environment is considered solved, when the average (over 100 episodes) of th
 4. DDPG/nn_model.py : Actor and Critic Neural Network Architecture
 5. DDPG/checkpoint_actor30.pth : Trained Agent's Neural Network weights - Actor (Ploicy)
 6. DDPG/checkpoint_critic30.pth: Trained Agent's Neural Network weights - Critic (state-action Value)
+7. DDPG/Reacher.exe : Unity Environment for Windows- 64bit
 
 
 
