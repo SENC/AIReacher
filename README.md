@@ -26,6 +26,14 @@ Develop an AI Agent using 'actor-critic' methods - which should learn the best p
 #Goal 
 The environment is considered solved, when the average (over 100 episodes) of those average scores is at least +30.
 
+# Files :
+
+1. Report.pdf: Gives complete project implementation report with results
+2. DDPG/Continuous_Control _local_windowsEnv.ipynb : Python Notebook "DDPG Implementation and test and validation in windows env"
+3. DDPG/agent.py : DDPG Agent class defintion and Utility functions like Replay Memory and OUNoise funtions
+4. DDPG/nn_model.py : Actor and Critic Neural Network Architecture
+5. DDPG/checkpoint_actor30.pth : Trained Agent's Neural Network weights - Actor (Ploicy)
+6. DDPG/checkpoint_critic30.pth: Trained Agent's Neural Network weights - Critic (state-action Value)
 
 
 
